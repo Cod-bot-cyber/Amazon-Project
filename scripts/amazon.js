@@ -75,7 +75,13 @@ button.addEventListener('click',() => {
         quantity : 1
       });
  }
-
-console.log(cart);
+let cartQuantity = 0;
+cart.forEach((item) => {
+cartQuantity += item.quantity;    //calculate cart quantity
 });
+
+const cartQty = document.querySelector('.js-cart-quantity');    //display cart quantity on navbar
+cartQty.innerHTML=cartQuantity;
+});
+
 });
